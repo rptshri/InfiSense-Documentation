@@ -50,12 +50,12 @@
 #include <Arduino_JSON.h>
 
 #define TOKEN "1c6e4c8e-256e-4077-bcd3-cc4ff99d44e0" // Put here your InfiIoT TOKEN
-#define WIFI_SSID "InfiIoT Technologies"                    // Put here your Wi-Fi SSID
-#define WIFI_PASSWORD "18072020"                // Put here your Wi-Fi password
+//#define WIFI_SSID "InfiIoT Technologies"                    // Put here your Wi-Fi SSID
+//#define WIFI_PASSWORD "18072020"                // Put here your Wi-Fi password
 //#define WIFI_SSID "OnePlus 5"                    // Put here your Wi-Fi SSID
 //#define WIFI_PASSWORD "9876543210"                // Put here your Wi-Fi password
-//#define WIFI_SSID "INFINITY"                    // Put here your Wi-Fi SSID
-//#define WIFI_PASSWORD "        "                // Put here your Wi-Fi password
+#define WIFI_SSID "."                    // Put here your Wi-Fi SSID
+#define WIFI_PASSWORD "00000000"                // Put here your Wi-Fi password
 #define HOST_ADDRESS "https://infiiot.com/api/v1.0/update-Variable-multiple"
 #define RECEIVE_ADDRESS "https://infiiot.com/api/v1.0/get-Variable-lv"
 
@@ -81,7 +81,7 @@ void setup()
 void loop()
 {
   updateLcdDisplay(4, 5000); //3 screens update every 5 seconds
-  getDataEvery(500); //get data from infiiot platform after specific interval
+  getDataEvery(100); //get data from infiiot platform after specific interval
   sendDataEvery(5 * 60000); // send data after every 1 minute
 }
 
